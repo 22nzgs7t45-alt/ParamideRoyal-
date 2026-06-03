@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramide Royal Casino - Exklusive Boni</title>
+    <style>
+        /* Grundlegendes Design im Pyramide Royal Stil */
+        :root {
+            --gold-light: #fcf6ba;
+            --gold-main: #d4af37;
+            --gold-dark: #aa771c;
+            --bg-dark: #0d1117;
+            --panel-bg: #161b22;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: radial-gradient(circle at top, #1a2235, var(--bg-dark)); /* Nachtblau zu Schwarz */
+            color: #e0e0e0; 
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+
+        /* Banner / Header Bereich */
+        .header-banner {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 2px solid var(--gold-dark);
+            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            margin-bottom: 40px;
+        }
+
+        /* Platzhalter für dein Bild */
+        .logo-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--gold-main);
+            box-shadow: 0 0 20px var(--gold-dark);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h1.brand-name {
+            font-family: 'Times New Roman', serif;
+            font-size: 3em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            /* Goldener Text-Effekt */
+            background: linear-gradient(to right, var(--gold-dark), var(--gold-light), var(--gold-main));
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #bbb;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Anleitungs-Sektion */
+        .instructions {
+            background: var(--panel-bg);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-left: 5px solid var(--gold-main);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+
+        .instructions h2 {
+            color: var(--gold-light);
+            margin-top: 0;
+            font-family: 'Times New Roman', serif;
+            letter-spacing: 1px;
+        }
+
+        .highlight {
+            font-size: 1.2em;
+            color: white;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: 1px dashed var(--gold-main);
+        }
+
+        .instructions ol {
+            font-size: 1.1em;
+            line-height: 1.6;
+            padding-left: 20px;
+        }
+
+        .instructions li { margin-bottom: 10px; }
+
+        /* Grid für die Casino-Links (6 Stück) */
+        .casino-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        /* Einzelne Casino-Karte */
+        .casino-card {
+            background: linear-gradient(145deg, #1e2532, #11151c);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .casino-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+            border-color: var(--gold-main);
+        }
+
+        .casino-name {
+            font-size: 1.8em;
+            color: white;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 15px;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        .casino-desc {
+            color: #aaa;
+            font-size: 0.95em;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        /* Goldener Button */
+        .btn-gold {
+            display: block;
+            background: linear-gradient(to bottom, var(--gold-light), var(--gold-main), var(--gold-dark));
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: all 0.3s;
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(to bottom, #fff, var(--gold-light), var(--gold-main));
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            transform: scale(1.02);
+        }
+
+        /* Footer / Disclaimer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.85em;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <img src="image.png" alt="Pyramide Royal Logo" class="logo-image" onerror="this.style.display='none'">
+        
+        <h1 class="brand-name">Pyramide Royal Casino</h1>
+        <div class="subtitle">Exklusive Partner-Angebote & Premium Boni</div>
+    </div>
+
+    <div class="container">
+        
+        <section class="instructions">
+            <h2>So aktivierst du deinen Bonus:</h2>
+            <div class="highlight">
+                <strong>WICHTIG: Du benötigst KEINEN extra Bonuscode!</strong>
+            </div>
+            <ol>
+                <li>Wähle eines der untenstehenden Casinos aus.</li>
+                <li>Klicke auf den goldenen <strong>"Jetzt anmelden"</strong> Button.</li>
+                <li>Erstelle dein Konto direkt über die sich öffnende Seite.</li>
+                <li><strong>Fertig!</strong> Dein Willkommensbonus und alle Vorteile werden unserem Link sei Dank automatisch für dein Konto hinterlegt.</li>
+            </ol>
+        </section>
+
+        <section class="casino-grid">
+            
+            <article class="casino-card">
+                <h3 class="casino-name">Legiano</h3>
+                <p class="casino-desc">Registriere dich über unseren Link und sichere dir sofort deinen Willkommensbonus. Kein Code erforderlich.</p>
+                <a href="https://lgno.monalvor.com/?mid=153529_2167331" class="btn-gold" target="_blank" rel="nofollow">Jetzt anmelden</a>
+            </article>
+
+            <article class="casino-card">
+                <h3 class="casino-name">Spinbara</h3>
+                <p class="casino-desc">Starte dein Abenteuer mit exklusiven Vorteilen. Die Bonus-Aktivierung erfolgt vollautomatisch bei Anmeldung.</p>
+                <a href="https://spnbr.monalvor.com/?mid=153529_2167332" class="btn-gold" target="_blank" rel="nofollow">Jetzt anmelden</a>
+            </article>
+
+            <article class="casino-card">
+                <h3 class="casino-name">Allyspin</h3>
+                <p class="casino-desc">Sichere dir Top-Konditionen für neue Spieler. Klick auf den Button, melde dich an und spiele los.</p>
+                <a href="https://all.monalvor.com/?mid=153529_2167333" class="btn-gold" target="_blank" rel="nofollow">Jetzt anmelden</a>
+            </article>
+
+            <article class="casino-card">
+                <h3 class="casino-name">SG Casino</h3>
+                <p class="casino-desc">Profitiere vom Premium-Bonusangebot. Die Registrierung über diesen Link reicht aus – kein Abtippen von Codes.</p>
+                <a href="https://sgc.monalvor.com/?mid=153529_2167334" class="btn-gold" target="_blank" rel="nofollow">Jetzt anmelden</a>
+            </article>
+
+            <article class="casino-card">
+                <h3 class="casino-name">Bankonbet</h3>
+                <p class="casino-desc">Dein exklusiver Startbonus wartet. Erstelle dein Konto und der Bonus wird deinem Profil direkt hinzugefügt.</p>
+                <a href="https://bnkw.monalvor.com/?mid=153529_2167335" class="btn-gold" target="_blank" rel="nofollow">Jetzt anmelden</a>
+            </article>
+
+            <article class="casino-card">
+                <h3 class="casino-name">Alfcasino</h3>
+                <p class="casino-desc">Hol dir das beste Angebot direkt bei der Anmeldung. Garantiert ohne versteckte Bonuscodes nutzbar.</p>
+                <a href="https://alcw.monalvor.com/?mid=153529_2167336" class="btn-gold" target="_blank" rel="nofollow">Jetzt anmelden</a>
+            </article>
+
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        18+ | Glücksspiel kann süchtig machen. Bitte spiele verantwortungsbewusst.<br>
+        Hilfe und Beratung findest du unter www.bzga.de oder www.check-dein-spiel.de.<br>
+        Es gelten die AGB der jeweiligen Anbieter. Diese Webseite enthält Affiliate-Links.
+    </footer>
+
+</body>
+</html>
